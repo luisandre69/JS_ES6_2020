@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cookies</title>
+    <script>
+      function clicked() {
+        console.log("Button Clicked");
+
+        // let key = document.myForm.name1.value;
+        // let value = document.myForm.name2.value;
+        // localStorage.setItem(key, value);
+
+        // localStorage.removeItem("color");
+
+        // console.log(localStorage.getItem("user"));
+
+        // localStorage.clear();
+
+        // document.cookie = "username=Tharun;";
+
+        let expiration = new Date();
+        expiration.setMonth(expiration.getMonth() - 1);
+        document.cookie =
+          "username=Tharun; expires=" + expiration.toUTCString() + "";
+      }
+    </script>
+  </head>
+  <body>
+    <form name="myForm">
+      Enter key info : <input type="text" name="name1" /><br />
+      Enter value info :
+      <input type="text" name="name2" />
+      <input type="button" value="submit" onclick="clicked()" />
+    </form>
+  </body>
+</html>
