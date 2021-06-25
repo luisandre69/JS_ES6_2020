@@ -54,7 +54,7 @@ function factorial(num) {
 console.log(factorial(6));
 
 // anonymous function
-(function() {
+(function () {
   console.log("I'm an anonymous");
 })();
 
@@ -72,7 +72,7 @@ var food = (x, y, z) => x + y + z;
 console.log("food: ", food(10, 20, 30));
 
 // variation 2
-var food = x => x + 100;
+var food = (x) => x + 100;
 console.log("food: ", food(10));
 
 // generator functions
