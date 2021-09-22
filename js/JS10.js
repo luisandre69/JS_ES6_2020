@@ -29,18 +29,14 @@ function add(x, y = 10) {
 
 console.log(add(5, 15));
 
-// rest parameters
-function lengthOfMe(...params) {
-  console.log(params);
-  return params.length;
-}
-
-console.log(lengthOfMe(5, 6, 7, 8));
-
 // function constructor
 let func = new Function("x", "y", "return x*y;");
 
 console.log(func(5, 6));
+
+let test = new Function("x", "y", "return x+y;");
+
+console.log(test(1, 2));
 
 // 6 = 6x5x4x3x2x1
 function factorial(num) {
@@ -56,6 +52,10 @@ console.log(factorial(6));
 // anonymous function
 (function () {
   console.log("I'm an anonymous");
+})();
+
+(function() {
+  console.log("call function")
 })();
 
 // parameters
